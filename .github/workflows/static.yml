@@ -33,15 +33,18 @@ jobs:
         run: sudo apt install doxygen && doxygen --version
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+            submodules: 'true'
       - name: Generate Doxygen documentation
-        run: doxygen docs/doxygenconf
+        working-directory: ./docs/
+        run: doxygen doxygenconf
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: './docs/html/'
+          path: './docs/output/html/'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
