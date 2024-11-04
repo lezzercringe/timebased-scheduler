@@ -47,10 +47,10 @@ public:
      * @details
      * Initializes the buffer with the given size, allocating memory for storing elements of type T. The buffer is empty upon construction.
      */
-    constexpr SPMCCircularBuffer(size_t size) {
-	buf_ = std::make_unique<T[]>(size);
-	max_size_ = size;
-    }
+    constexpr SPMCCircularBuffer(size_t size)
+	: buf_(std::make_unique<T[]>(size)),
+	  max_size_(size)
+    { }
 
     /**
      * @brief Destructor for the circular buffer.
