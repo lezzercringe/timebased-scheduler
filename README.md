@@ -4,7 +4,7 @@ This header-only library provides a simple and efficient way to schedule and exe
 The core component of this library is the `Scheduler` class, which manages task scheduling and execution with the help of a thread pool for concurrency.
 
 ## Requirements
-- c++23 standard
+- c++20 standard
 
 ## Quickstart
 The simplest way to integrate this library into your project is by using FetchContent.
@@ -13,7 +13,7 @@ The simplest way to integrate this library into your project is by using FetchCo
 cmake_minimum_required(VERSION 3.22.1)
 project(SomeProject VERSION 1.0 LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include(FetchContent)
