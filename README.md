@@ -6,7 +6,7 @@ The core component of this library is the `Scheduler` class, which manages task 
 ## Usage
 
 ```cpp
-#include "scheduler.h"
+#include "scheduler/scheduler.h"
 
 using namespace scheduler;
 

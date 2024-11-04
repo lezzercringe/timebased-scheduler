@@ -1,9 +1,8 @@
 #include <iostream>
 
-#include "scheduler.h"
+#include "scheduler/scheduler.h"
 
 using namespace scheduler;
-
 
 int main() {
     Scheduler scheduler(10, 4); // 10 tasks buffer size, 4 concurrent threads
